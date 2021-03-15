@@ -1,0 +1,29 @@
+{
+  "name": "Laxer",
+  "version": "1.0.0",
+  "description": "An app for highlighting the mouse cursor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron --enable-transparent-visuals --disable-gpu .",
+    "dev": "electromon .",
+    "build": "electron-packager . NrdyBhu1App --platform=win32  --arch=x64 --out Build/ ",
+    "ibuild": "electron-packager . NrdyBhu1App --platform=win32  --arch=x64 --out Build/ --overwrite --icon=icon.ico"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "NrdyBhu1",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  },
+  "dependencies": {
+    "electromon": "^1.0.10",
+    "electron-packager": "^15.1.0"
+  }
+}

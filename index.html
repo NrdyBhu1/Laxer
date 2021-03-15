@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .content p {
+      width: 700px;
+      line-height: 26px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .cursor {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #c6c6c6;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: .1s;
+    }
+
+    .cursor2 {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background-color: #c6c6c6;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: .15s;
+    }
+
+    .content:hover~.cursor {
+      transform: translate(-50%, -50%) scale(1.5);
+      background-color: #c6c6c6;
+      opacity: .5;
+    }
+
+    .content:hover~.cursor2 {
+      opacity: 0;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor2 = document.querySelector(".cursor2");
+      document.addEventListener("mousemove", function (e) {
+        cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+      });
+    </script>
+</body>
+
+</html>
